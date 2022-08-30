@@ -2,7 +2,7 @@ require('env2')('.env');
 const { Pool } = require('pg');
 
 const {
-  NODE_ENV, TEST_DATABESE_URL, DEV_DATABESE_URL, DATABASE_URL,
+  NODE_ENV, TEST_DATABASE_URL, DEV_DATABASE_URL, DATABASE_URL,
 } = process.env;
 
 let connectionString = '';
@@ -16,10 +16,10 @@ switch (NODE_ENV) {
     };
     break;
   case 'development':
-    connectionString = DEV_DATABESE_URL;
+    connectionString = DEV_DATABASE_URL;
     break;
   case 'test':
-    connectionString = TEST_DATABESE_URL;
+    connectionString = TEST_DATABASE_URL;
     break;
   default:
     throw new Error('The Database URL is invalid!!!');
