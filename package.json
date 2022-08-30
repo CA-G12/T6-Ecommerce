@@ -1,0 +1,42 @@
+{
+  "name": "t6-ecommerce",
+  "version": "1.0.0",
+  "description": "An amazing Ecommerce website",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV='production' node ./server/",
+    "test": "cross-env NODE_ENV='test' jest",
+    "dev": "cross-env NODE_ENV='development' nodemon ./server/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CA-G12/T6-Ecommerce.git"
+  },
+  "keywords": [
+    "Ecommerce",
+    "team6",
+    "website",
+    "apple"
+  ],
+  "author": "Rabee, Tariq, Basil, Shams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CA-G12/T6-Ecommerce/issues"
+  },
+  "homepage": "https://github.com/CA-G12/T6-Ecommerce#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cross-env": "^7.0.3",
+    "env2": "^2.2.2",
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.1",
+    "nodemon": "^2.0.19",
+    "supertest": "^6.2.4"
+  }
+}
