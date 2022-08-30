@@ -1,3 +1,4 @@
-const selectUserEmail = require('./signIn');
+const selectUserEmail = require("./signIn");
+const postSignupQuery = require("./signupQuery");
 
-module.exports = { selectUserEmail };
+module.exports = { selectUserEmail, postSignupQuery };
