@@ -21,7 +21,7 @@ create table cart(
     id serial primary key,
     user_id int,
     product_id int,
-    foreign key(user_id) references users(id),
+    foreign key (user_id) references users(id),
     constraint fk_product_id foreign key(product_id) references products(id)
 );
 
