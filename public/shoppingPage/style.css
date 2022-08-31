@@ -147,4 +147,5 @@ footer > div {
 .icons i {
     font-size: 25px;
     padding: 19px;
+    cursor: pointer;
 }
