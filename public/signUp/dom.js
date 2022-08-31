@@ -4,6 +4,7 @@ const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm_password");
 const signupBtn = document.querySelector("#signup_btn");
+const inputs = document.querySelectorAll("input");
 
 signupBtn.addEventListener("click", () => {
   const first_name = firstName.value;
@@ -35,6 +36,21 @@ signupBtn.addEventListener("click", () => {
         password_user,
         confirm_password,
       }),
-    }).then((data) => console.log(data.json()));
+    })
+      .then((data) => data.json())
+      .then((data) => {
+        if (data.message === "successful sign up")
+          window.location.href = "../signIn/index.html";
+      });
   }
+});
+
+inputs.forEach((e) => {
+  e.addEventListener("input", () => {
+    if (e.value.length === 0) {
+      e.style.outline = "2px solid red";
+    } else {
+      e.style.outline = "2px solid green";
+    }
+  });
 });
