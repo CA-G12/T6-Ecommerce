@@ -86,7 +86,7 @@ main {
   align-items: center;
 }
 
-main form {
+#form {
   width: 30%;
   display: flex;
   justify-content: center;
@@ -99,13 +99,13 @@ main form {
   box-shadow: 0 0 10px 0 rgb(211, 211, 211);
 }
 
-form h1 {
+#form h1 {
   text-transform: uppercase;
   margin-bottom: 2rem;
   color: #61a772;
 }
 
-form input {
+#form input {
   width: 100%;
   padding: 0.8rem 1.5rem;
   margin: 0.5rem 0;
@@ -114,7 +114,7 @@ form input {
   border-radius: 10px;
 }
 
-form button {
+#form button {
   margin-top: 1rem;
   padding: 0.7rem 3rem;
   border: 0;
@@ -129,7 +129,7 @@ form button {
   box-shadow: 0 4px 5px 0 rgb(109, 109, 109);
 }
 
-form button:hover {
+#form button:hover {
   background-color: inherit;
   outline: 2px solid#9fccaa;
   font-weight: 500;
