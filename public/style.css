@@ -1,0 +1,208 @@
+:root{
+    --cyan : #00ffff;
+    --darkCyan : #268a6d;
+    --white : #FFF;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+
+}
+header{
+    width: 100%;
+    /* height: ; */
+}
+/*  -------------------------------------- Start About Navbar -------------------------------------- */
+header {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    color: rgb(250, 250, 250);
+    box-shadow: 0 4px 4px 0 #222
+  }
+  
+  header h1 {
+    text-transform: uppercase;
+  }
+  
+  header h1::first-letter {
+    color:rgb(129, 255, 219);
+  }
+  
+  header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0 8rem;
+  }
+  
+  header ul li {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  header ul li:hover {
+    color: rgb(129, 255, 219);
+  }
+  
+  header a {
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  header a:hover {
+    outline: 1px solid rgb(129, 255, 219);
+    color: rgb(129, 255, 219);
+  }
+/*  -------------------------------------- End About Navbar -------------------------------------- */
+
+/*  -------------------------------------- Start About main -------------------------------------- */
+.introPage {
+    background: linear-gradient(90deg, rgba(255,186,216,1) 1%, rgba(255,229,240,1) 37%, rgba(198,224,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.introPage h2 {
+    text-align: center;
+    padding: 60px 0px 35px;
+}
+.introPage p  {
+    text-align: center;
+    color: gray;
+}
+
+.introPage img {
+    width: 350px;
+    height: 350px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(to right, var(--cyan), var(--darkCyan));
+    border-radius: 15px;
+    padding: 10px 65px;
+    opacity: 0.8;
+    margin-bottom: 75px;
+}
+.btn:hover{
+    box-shadow: 0px 0px 10px 2px rgb(160, 157, 157);
+    transform: translate(2px);
+    transition: all 0.3s ease;
+}
+
+.productionPage {
+    display: flex;
+    flex-wrap: wrap;
+}
+.productionPage .imac  {
+    background-color: #F6705A;
+}
+
+.productionPage .appleWatch {
+    background-color: #EEEDED;
+ }
+ .productionPage .airpods {
+    background-color: #1AE09D;     
+ }
+
+ .appleWatch .descriptionProduct {
+    color: #000;
+ }
+ .descriptionProduct .btn {
+    background-image: linear-gradient(to right, #ffffff, #7b7b7b);
+ }
+
+ .descriptionProduct .btn:hover {
+    box-shadow: 0px 0px 10px 2px var(--white);
+    transform: translate(2px);
+    transition: all 0.3s ease; }
+
+.product {
+    max-width: 50%;
+    display: flex;
+    background: #00c6ff;
+}
+
+.descriptionProduct {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+    max-width: 50%;
+    margin-left: 35px;
+}
+.descriptionProduct p {
+    font-size: 16px;
+    opacity: 0.8;
+ }
+
+ .descriptionProduct a {
+    background-color: #D9D9D8;
+    color: #000;
+ }
+.imgProduct img {
+    width: 300px;
+    height: 300px;
+}
+
+.randomProduct {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 500px;
+}
+
+.descriptionRandomProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 272px;
+    align-items: flex-start;
+}
+.randomProduct2 {
+    background-color: #DAE9E7;
+}
+
+/*  -------------------------------------- End About Main -------------------------------------- */
+/*  -------------------------------------- Start About Footer -------------------------------------- */
+footer {
+    background-color: #323232;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0px;
+
+}
+
+footer > div {
+    line-height: 40px;
+}
+
+.icons i {
+    font-size: 25px;
+    padding: 19px;
+    cursor: pointer;
+}
+/*  -------------------------------------- End About Footer -------------------------------------- */

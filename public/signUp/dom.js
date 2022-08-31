@@ -4,6 +4,7 @@ const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm_password");
 const signupBtn = document.querySelector("#signup_btn");
+const inputs = document.querySelectorAll("input");
 
 signupBtn.addEventListener("click", () => {
   const first_name = firstName.value;
@@ -14,16 +15,16 @@ signupBtn.addEventListener("click", () => {
 
   const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (first_name.length === 0) {
-    firstName.style.outline = "2px solid red";
+    firstName.style.outline = "2px solid #ff5353";
   } else if (last_name.length === 0) {
-    lastName.style.outline = "2px solid red";
+    lastName.style.outline = "2px solid #ff5353";
   } else if (!regexEmail.test(email_user) || email_user.length === 0) {
     email.style.outline = "2px solid red";
   } else if (password_user.length === 0) {
     password.style.outline = "2px solid red";
   } else if (confirm_password !== password_user) {
-    password.style.outline = "2px solid red";
-    confirmPassword.style.outline = "2px solid red";
+    password.style.outline = "2px solid #ff5353";
+    confirmPassword.style.outline = "2px solid #ff5353";
   } else {
     fetch("/signup", {
       method: "POST",
@@ -35,6 +36,21 @@ signupBtn.addEventListener("click", () => {
         password_user,
         confirm_password,
       }),
-    }).then((data) => console.log(data.json()));
+    })
+      .then((data) => data.json())
+      .then((data) => {
+        if (data.message === "successful sign up")
+          window.location.href = "../signIn/index.html";
+      });
   }
+});
+
+inputs.forEach((e) => {
+  e.addEventListener("input", () => {
+    if (e.value.length === 0) {
+      e.style.outline = "2px solid red";
+    } else {
+      e.style.outline = "2px solid green";
+    }
+  });
 });
