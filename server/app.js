@@ -17,11 +17,11 @@ app.use(router);
 
 app.set('port', process.env.PORT || 3000);
 
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
   res.sendStatus(500);
 });
 
