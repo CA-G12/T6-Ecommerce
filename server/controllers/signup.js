@@ -13,15 +13,15 @@ const postSignup = (req, res) => {
     confirm_password: joi.ref("password_user"),
   });
   schema
-    .validateAsync(req.body, { abortEarly: false })
-    .then((data) => console.log(data))
+    .validateAsync(req.body)
+    .then((data) => data)
     .catch((err) => console.log(err));
   bcrypt
     .hash(password_user, 10)
     .then((hashed) =>
       postSignupQuery([first_name, last_name, email_user, hashed])
     )
-    .catch((err) => err);
+    .catch((err) => console.log(err));
 };
 
 module.exports = postSignup;
