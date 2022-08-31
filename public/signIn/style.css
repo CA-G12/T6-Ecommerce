@@ -70,6 +70,15 @@ header a:hover {
   color: rgb(129, 255, 219);
 }
 
+header a:nth-child(1) {
+  font-size: 0.8rem;
+}
+
+header a:nth-child(1):hover {
+  outline: 0;
+  color: #eee;
+}
+
 main {
   width: 100%;
   display: flex;
