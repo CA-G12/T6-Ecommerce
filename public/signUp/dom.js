@@ -13,15 +13,13 @@ signupBtn.addEventListener("click", () => {
   const confirm_password = confirmPassword.value;
 
   const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  const regexPassword =
-    /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,15})/;
   if (first_name.length === 0) {
     firstName.style.outline = "2px solid red";
   } else if (last_name.length === 0) {
     lastName.style.outline = "2px solid red";
   } else if (!regexEmail.test(email_user) || email_user.length === 0) {
     email.style.outline = "2px solid red";
-  } else if (!regexPassword.test(password_user) || password_user.length === 0) {
+  } else if (password_user.length === 0) {
     password.style.outline = "2px solid red";
   } else if (confirm_password !== password_user) {
     password.style.outline = "2px solid red";
