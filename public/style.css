@@ -1,0 +1,16 @@
+:root{
+
+    --white : #FFF;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+header{
+    width: 100%;
+    height: ;
+}
