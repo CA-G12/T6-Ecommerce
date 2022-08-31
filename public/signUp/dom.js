@@ -9,18 +9,34 @@ signupBtn.addEventListener("click", () => {
   const first_name = firstName.value;
   const last_name = lastName.value;
   const email_user = email.value;
-  const password_user = `${password.value}`;
+  const password_user = password.value;
   const confirm_password = confirmPassword.value;
 
-  fetch("/signup", {
-    method: "POST",
-    headers: { "Content-type": "application/json" },
-    body: JSON.stringify({
-      first_name,
-      last_name,
-      email_user,
-      password_user,
-      confirm_password,
-    }),
-  }).then((data) => console.log(data.json()));
+  const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const regexPassword =
+    /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,15})/;
+  if (first_name.length === 0) {
+    firstName.style.outline = "2px solid red";
+  } else if (last_name.length === 0) {
+    lastName.style.outline = "2px solid red";
+  } else if (!regexEmail.test(email_user) || email_user.length === 0) {
+    email.style.outline = "2px solid red";
+  } else if (!regexPassword.test(password_user) || password_user.length === 0) {
+    password.style.outline = "2px solid red";
+  } else if (confirm_password !== password_user) {
+    password.style.outline = "2px solid red";
+    confirmPassword.style.outline = "2px solid red";
+  } else {
+    fetch("/signup", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({
+        first_name,
+        last_name,
+        email_user,
+        password_user,
+        confirm_password,
+      }),
+    }).then((data) => console.log(data.json()));
+  }
 });
