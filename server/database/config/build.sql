@@ -6,7 +6,7 @@ create table users(
     first_name varchar(150) not null,
     last_name varchar(150) not null,
     email varchar(150) not null unique,
-    password varchar(50)
+    password text
 );
 
 create table products(
