@@ -1,4 +1,4 @@
-const { deleteCartQuery } = require("../database/queries");
+const { deleteCartQuery } = require('../database/queries');
 
 const deleteCart = (req, res) => {
   const { id } = req.params;
