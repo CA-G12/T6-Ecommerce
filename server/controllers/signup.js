@@ -24,7 +24,7 @@ const postSignup = (req, res) => {
     .then((dd) => {
       res.send({ message: "successful sign up" });
     })
-    .catch((err) => console.log(err));
+    .catch((err) => res.json({ message: "Email already exists" }));
 };
 
 module.exports = postSignup;

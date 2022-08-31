@@ -3,6 +3,7 @@ const postSignup = require("./signup");
 const getProductsCart = require("./getProductCart");
 const getAllProducts = require("./getAllProducts");
 const deleteProductCart = require("./deleteProductCart");
+const logOut = require("./logout");
 
 module.exports = {
   signIn,
@@ -10,4 +11,5 @@ module.exports = {
   getProductsCart,
   deleteProductCart,
   getAllProducts,
+  logOut,
 };
