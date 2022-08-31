@@ -9,8 +9,149 @@
 body{
     width: 100vw;
     height: 100vh;
+    font-family: sans-serif;
+
 }
 header{
     width: 100%;
-    height: ;
+    /* height: ; */
 }
+/*  -------------------------------------- Start About Navbar -------------------------------------- */
+nav {
+    display: flex !important;
+    justify-content: space-around;
+    font-size: 28px;
+    background-color: #323232;
+    padding: 20px 10px;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+.navbarItem a {
+    margin: 0px 10px;
+}
+
+/*  -------------------------------------- End About Navbar -------------------------------------- */
+
+/*  -------------------------------------- Start About main -------------------------------------- */
+.introPage {
+    background: linear-gradient(90deg, rgba(255,186,216,1) 1%, rgba(255,229,240,1) 37%, rgba(198,224,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.introPage h2 {
+    text-align: center;
+    padding: 60px 0px 35px;
+}
+.introPage p  {
+    text-align: center;
+    color: gray;
+    
+}
+
+.introPage img {
+    width: 350px;
+    height: 350px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(255, 72, 0);
+    border-radius: 15px;
+    padding: 5px 45px;
+    opacity: 0.8;
+    margin-bottom: 75px;
+}
+
+.productionPage {
+    display: flex;
+    flex-wrap: wrap;
+}
+.productionPage .imac  {
+    background-color: #F6705A;
+}
+
+.productionPage .appleWatch {
+    background-color: #EEEDED;
+ }
+ .productionPage .airpods {
+    background-color: #1AE09D;     
+ }
+
+ .appleWatch .descriptionProduct {
+    color: #000;
+ }
+
+.product {
+    max-width: 50%;
+    display: flex;
+    background: #00c6ff;
+}
+
+.descriptionProduct {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+    max-width: 50%;
+    margin-left: 35px;
+}
+.descriptionProduct p {
+    font-size: 16px;
+    opacity: 0.8;
+ }
+
+ .descriptionProduct a {
+    background-color: #D9D9D8;
+    color: #000;
+ }
+.imgProduct img {
+    width: 300px;
+    height: 300px;
+}
+
+.randomProduct {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 500px;
+}
+
+.descriptionRandomProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 272px;
+    align-items: flex-start;
+}
+.randomProduct2 {
+    background-color: #DAE9E7;
+}
+
+/*  -------------------------------------- End About Main -------------------------------------- */
+/*  -------------------------------------- Start About Footer -------------------------------------- */
+footer {
+    background-color: #323232;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0px;
+
+}
+
+footer > div {
+    line-height: 40px;
+}
+
+.icons i {
+    font-size: 25px;
+    padding: 19px;
+}
+/*  -------------------------------------- End About Footer -------------------------------------- */
