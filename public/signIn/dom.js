@@ -20,10 +20,15 @@ loginBtn.addEventListener("click", () => {
   })
     .then((data) => data.json())
     .then((result) => {
-      console.log(document.cookie)
-      if (result.message === "Success" || result.message === "have-access") {
+      if (result.error) {
+        const errorPlaceholder = document.getElementById("errorPlaceholder");
+        errorPlaceholder.textContent = result.error;
+      } else {
         window.location.href = "/products";
       }
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      const errorPlaceholder = document.getElementById("errorPlaceholder");
+      errorPlaceholder.textContent ='Something went wrong, please try again later';
+    });
 });

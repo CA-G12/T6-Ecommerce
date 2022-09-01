@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="/">
-            <h1>Apple</h1>
-        </a>
-        <ul>
-            <li>iPhone</li>
-            <li>iPad</li>
-            <li>MacBook</li>
-            <li>Mac</li>
-            <li>Apple TV</li>
-        </ul>
-        <a href="/signin">login</a>
-        <a href="/signup">signup</a>
-        <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="/">
+        <h1>Apple</h1>
+      </a>
+      <ul>
+        <li>iPhone</li>
+        <li>iPad</li>
+        <li>MacBook</li>
+        <li>Mac</li>
+        <li>Apple TV</li>
+      </ul>
+      <a href="/signIn">login</a>
+      <a href="/signUp">signup</a>
+      <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
     </header>
     <main>
-        <div id="form">
-            <h1>Login in </h1>
-            <input id="email-input" name="email" type="email" placeholder="Email" />
-            <input id="password-input" name="password" type="password" placeholder="password" />
-            <button id="btn">LOGIN IN</button>
-        </div>
-
+      <div id="form">
+        <h1>Login in</h1>
+        <input id="email-input" name="email" type="email" placeholder="Email" />
+        <input
+          id="password-input"
+          name="password"
+          type="password"
+          placeholder="password"
+        />
+        <button id="btn">LOGIN IN</button>
+        <p
+          id="errorPlaceholder"
+          style="margin-top: 15px; color: red; text-align: center"
+        ></p>
+      </div>
     </main>
     <script src="./dom.js"></script>
-</body>
-
+  </body>
 </html>

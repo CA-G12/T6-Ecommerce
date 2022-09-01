@@ -19,7 +19,7 @@ const postSignup = (req, res) => {
   bcrypt
     .hash(password_user, 10)
     .then((hashed) =>
-      postSignupQuery([first_name, last_name, email_user, hashed])
+      postSignupQuery([first/_name, last_name, email_user, hashed])
     )
     .then((dd) => {
       res.send({ message: "successful sign up" });
