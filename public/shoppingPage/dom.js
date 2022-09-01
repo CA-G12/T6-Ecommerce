@@ -1,5 +1,6 @@
 const productList = document.getElementById('productList');
-
+const logsignDiv = document.querySelector("header div");
+console.log('fsfsdf')
 function buyItem() {
   fetch();
 }
@@ -34,7 +35,24 @@ const renderProducts = (data) => {
   });
 };
 
-fetch('/products')
+function handleDom() {
+  console.log('hello')
+  fetch('/products')
   .then((res) => res.json())
-  .then(renderProducts)
+  .then(data => {
+    if (data.message === 'not-login') {
+      console.log(data)
+      renderProducts(data);
+    } else {
+      logsignDiv.textContent = "";
+      const logOut = document.createElement("a");
+      logOut.href = "/logout";
+      logOut.textContent = "LOGOUT";
+      logsignDiv.appendChild(logOut);
+      renderProducts(data);
+    }
+  })
   .catch((err) => console.error(err));
+}
+
+handleDom ()

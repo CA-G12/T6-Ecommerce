@@ -3,9 +3,12 @@ const loginBtn = document.querySelector("#btn");
 const emailInput = document.querySelector("#email-input");
 const passwordInput = document.querySelector("#password-input");
 
+let email = emailInput.value;
+let password = passwordInput.value;
+
 loginBtn.addEventListener("click", () => {
-  const email = emailInput.value;
-  const password = passwordInput.value;
+  email = emailInput.value;
+  password = passwordInput.value;
 
   fetch("/signin", {
     method: "POST",
@@ -17,8 +20,9 @@ loginBtn.addEventListener("click", () => {
   })
     .then((data) => data.json())
     .then((result) => {
-      if (result.message === "Success") {
-        window.location.href = "../shoppingPage/index.html";
+      console.log(document.cookie)
+      if (result.message === "Success" || result.message === "have-access") {
+        window.location.href = "/products";
       }
     })
     .catch((err) => console.log(err));

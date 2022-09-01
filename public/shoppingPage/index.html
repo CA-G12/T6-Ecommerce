@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/shoppingPage/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <script src="./script.js" defer></script>
-    <script src="./dom.js" defer></script>
     <title>Document</title>
 </head>
 
@@ -24,8 +22,10 @@
             <li>Mac</li>
             <li>Apple TV</li>
         </ul>
-        <a href="/signin">login</a>
-        <a href="/signup">signup</a>
+        <div>
+            <a href="/signin" id="login">login</a>
+            <a href="/signup" id="signup">signup</a>
+        </div>
         <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
     </header>
     <main>
@@ -34,7 +34,7 @@
             </div>
             <div id="search">
                 <input id="searchField" class="search-field" type="text" name="searchQuery"
-                    placeholder="Look for somthing..?!" />
+                placeholder="Look for somthing..?!" />
             </div>
         </section>
         <section id="products">
@@ -61,6 +61,7 @@
             <i class="fa-brands fa-twitter"></i>
         </div>
     </footer>
+    <script src="/shoppingPage/dom.js"></script>
 </body>
 
 </html>
