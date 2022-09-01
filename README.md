@@ -12,7 +12,7 @@
 
 ## **Live Website**
 
-You can check out our website here [**Apple**](https://flyme4.herokuapp.com/).
+You can check out our website here [**Apple**](https://t6-apple-store.herokuapp.com/).
 
 ## **About Our Website**
 
