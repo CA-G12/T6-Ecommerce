@@ -24,7 +24,7 @@ loginBtn.addEventListener("click", () => {
         const errorPlaceholder = document.getElementById("errorPlaceholder");
         errorPlaceholder.textContent = result.error;
       } else {
-        window.location.href = "/products";
+        window.location.href = "/shoppingPage";
       }
     })
     .catch((err) => {
