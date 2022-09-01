@@ -43,10 +43,10 @@ signupBtn.addEventListener("click", () => {
         if (data.message === "successful sign up") {
           window.location.href = "../signIn/index.html";
         }
-        if (data.message === "Email already exists") {
-          errorMessage.textContent = data.message;
-          email.style.outline = "2px solid red";
-        }
+        // if (data.message === "Email already exists") {
+        //   errorMessage.textContent = data.message;
+        //   email.style.outline = "2px solid red";
+        // }
       });
   }
 });
