@@ -1,7 +1,7 @@
 const joi = require("joi");
 
 const loginSchema = joi.object({
-  email: joi.string().min(7).max(20),
+  email: joi.string().email().required(),
   password: joi.string().alphanum(),
 });
 
